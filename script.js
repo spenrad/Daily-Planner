@@ -46,4 +46,13 @@ $('.save').on('click', function(){
     // console.log($(this).attr('name'));
     // console.log($('#'+$(this).attr('name')).val());
     localStorage.setItem($(this).attr('name'), $('#'+$(this).attr('name')).val());
-})
+});
+
+function displayPlan() {
+    for (i=9; i <18; i++) {
+    var planText = localStorage.getItem(i);
+    $("#"+i).val(planText);
+    }
+}
+
+displayPlan();
