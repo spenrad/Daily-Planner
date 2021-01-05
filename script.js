@@ -28,16 +28,22 @@ for (i=9; i < 18; i++) {
     }   else {
             timeStr = i + " a.m."
         }
-
+    // assigns proper classes and attributes for styling and future listeners
   timeSlot.text(timeStr);
   textTd.addClass('input');
   textArea.attr('id', i);
   saveIcon.addClass('save');
   saveIcon.text('save');
   saveIcon.attr('name', i);
-  
+    // appends the tds to the tr and the text area inside the textTd td
   tr.append(timeSlot, textTd, saveIcon);
   textTd.append(textArea);
-  
+    // appends all trs to the table
   $('#plannerTable').append(tr);  
-  } 
+} 
+
+$('.save').on('click', function(){
+    // console.log($(this).attr('name'));
+    // console.log($('#'+$(this).attr('name')).val());
+    localStorage.setItem($(this).attr('name'), $('#'+$(this).attr('name')).val());
+})
