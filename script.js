@@ -1,11 +1,12 @@
 var DateTime = luxon.DateTime;
-var now = DateTime.local();
+var time = DateTime.local();
+var now = time.toLocaleString(DateTime.DATETIME_MED);
 
-$('h1').append(now);
+// console.log(now);
+// console.log(now.c);
+// console.log(now.year);
+// console.log(now.hour);
 
-console.log(now);
+$('h1').after(now);
 
-console.log(now.c);
-
-console.log(now.year);
-console.log(now.hour);
+// Create trs and tds with jquery

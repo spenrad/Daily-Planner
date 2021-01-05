@@ -10,7 +10,7 @@ h1 {
     margin: 0 5% 0;
 }
 
-table, th, td {
+table, tr, td {
     border: 2px solid black;
 }
 
@@ -21,7 +21,7 @@ table {
     width: 90%;
 }
 
-td {
+tr {
     padding: 20px;
 }
 
@@ -33,6 +33,7 @@ td {
     width: 5%;
 }
 
-/* .pasthr background to grey*/
-/* .currenthr background to orange*/
-/* .futurehr background to green*/
+
+/* .past background to grey*/
+/* .present background to orange*/
+/* .future background to green*/
