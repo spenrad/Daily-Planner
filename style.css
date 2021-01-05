@@ -34,6 +34,14 @@ tr {
 }
 
 
-/* .past background to grey*/
-/* .present background to orange*/
-/* .future background to green*/
+.past {
+    background: #333333a9;
+}
+
+.present {
+    background: rgba(255, 102, 0, 0.671);
+}
+
+.future {
+    background: rgb(7, 77, 7);
+}
