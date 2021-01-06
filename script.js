@@ -1,13 +1,14 @@
 var DateTime = luxon.DateTime;
 var time = DateTime.local();
-var now = time.toLocaleString(DateTime.DATETIME_MED);
+var now = time.toLocaleString(DateTime.DATE_HUGE);
 
 // console.log(now);
 // console.log(now.c);
 // console.log(now.year);
 // console.log(now.hour);
 
-$('h1').after(now);
+var showTime = $('<h2>').text(now);
+$('h1').after(showTime);
 
 
 // for loop creates table rows corresponding with the hour "i"
@@ -46,8 +47,9 @@ for (i = 9; i < 18; i++) {
   timeSlot.text(timeStr);
   textTd.addClass("input " + plannerColor);
   textArea.attr("id", i);
+  textArea.addClass(plannerColor);
   saveIcon.addClass("save");
-  saveIcon.text("save");
+  saveIcon.text("Save");
   saveIcon.attr("name", i);
   // appends the tds to the tr and the text area inside the textTd td
   tr.append(timeSlot, textTd, saveIcon);
@@ -70,5 +72,6 @@ function displayPlan() {
     $("#"+i).val(planText);
     }
 }
+
 // call the function or the saved local data will not display
 displayPlan();
